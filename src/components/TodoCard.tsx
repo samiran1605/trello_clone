@@ -35,6 +35,7 @@ function TodoCard({
           <XCircleIcon className="ml-5 h-8 w-8" />
         </button>
       </div>
+      {/* add image here */}
     </div>
   );
 }
