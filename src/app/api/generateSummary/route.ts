@@ -3,7 +3,6 @@ import openai from "../../../../openai";
 
 export async function POST(request: Request) {
   const { todos } = await request.json();
-  console.log(todos);
 
   // communicate with openAI GPT-4
   const response = await openai.chat.completions.create({
@@ -26,7 +25,5 @@ export async function POST(request: Request) {
     ],
   });
 
-  console.log("DATA IS", response);
-  console.log(response.choices[0].message.content);
   return NextResponse.json(response.choices[0].message);
 }
