@@ -38,7 +38,7 @@ function TodoCard({
       };
       fetchImage();
     }
-  });
+  }, [todo]);
 
   return (
     <div
